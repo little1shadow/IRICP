@@ -1,0 +1,17 @@
+[
+{
+  "directory": "E:/SignalProccessing/ExperimentCode/icpSparse_MEE_MCC",
+  "command": "E:\\mingw64\\bin\\c++.exe -DICPSPARSE_MEDIA_DIR=\\\"\\\\\\\"E:/SignalProccessing/ExperimentCode/icpSparse_MEE_MCC/media/\\\\\\\"\\\" @CMakeFiles/icpSparse.dir/includes_CXX.rsp  -std=c++11 -O2 -o CMakeFiles\\icpSparse.dir\\main.cpp.obj -c E:\\SignalProccessing\\ExperimentCode\\icpSparse_MEE_MCC\\main.cpp",
+  "file": "E:/SignalProccessing/ExperimentCode/icpSparse_MEE_MCC/main.cpp"
+},
+{
+  "directory": "E:/SignalProccessing/ExperimentCode/icpSparse_MEE_MCC/lib/ObjLoader",
+  "command": "E:\\mingw64\\bin\\c++.exe -DICPSPARSE_MEDIA_DIR=\\\"\\\\\\\"E:/SignalProccessing/ExperimentCode/icpSparse_MEE_MCC/media/\\\\\\\"\\\" @CMakeFiles/ObjectLoader.dir/includes_CXX.rsp  -std=c++11 -O2 -o CMakeFiles\\ObjectLoader.dir\\ObjLoader.cpp.obj -c E:\\SignalProccessing\\ExperimentCode\\icpSparse_MEE_MCC\\lib\\ObjLoader\\ObjLoader.cpp",
+  "file": "E:/SignalProccessing/ExperimentCode/icpSparse_MEE_MCC/lib/ObjLoader/ObjLoader.cpp"
+},
+{
+  "directory": "E:/SignalProccessing/ExperimentCode/icpSparse_MEE_MCC/lib/IcpOptimizer",
+  "command": "E:\\mingw64\\bin\\c++.exe -DICPSPARSE_MEDIA_DIR=\\\"\\\\\\\"E:/SignalProccessing/ExperimentCode/icpSparse_MEE_MCC/media/\\\\\\\"\\\" @CMakeFiles/IcpOptimizer.dir/includes_CXX.rsp  -std=c++11 -O2 -o CMakeFiles\\IcpOptimizer.dir\\IcpOptimizer.cpp.obj -c E:\\SignalProccessing\\ExperimentCode\\icpSparse_MEE_MCC\\lib\\IcpOptimizer\\IcpOptimizer.cpp",
+  "file": "E:/SignalProccessing/ExperimentCode/icpSparse_MEE_MCC/lib/IcpOptimizer/IcpOptimizer.cpp"
+}
+]
