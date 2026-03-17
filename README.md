@@ -1,4 +1,4 @@
-# Initialization Robust Iterative Closest Point Algorithm #
+# Initialization Robust Iterative Closest Point via Error-Interval Minimization for Point Cloud Fine Registration #
 
 This repository contains an implementation of the [IRICP]
 ## Dependencies ##
