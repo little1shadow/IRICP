@@ -115,7 +115,7 @@ int main(int argc, char* argv[])
   Matrix<double,Dynamic,3> pointCloudOne = myLoader(first_path);
   Matrix<double,Dynamic,3> pointCloudTwo = myLoader(second_path);
   
-  //Creating an IcpOptimizer in order to perform the sparse icp
+  //Creating an IcpOptimizer in order to perform the IRICP
   IcpOptimizer myIcpOptimizer(pointCloudOne,pointCloudTwo,kNormals,nbIterations,nbIterationsIn,mu,nbIterShrink,p,method,verbose);
 
   //Perform ICP
