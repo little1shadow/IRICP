@@ -1,6 +1,6 @@
 #include "IcpOptimizer.h"
 #include <numeric>
-#include "E:\SignalProccessing\ExperimentCode\icpSparse_MEE_MCC\lib\ObjLoader\ObjLoader.h"
+#include "\lib\ObjLoader\ObjLoader.h"
 #include<vector>
 #include<chrono>
 using namespace std;
@@ -125,18 +125,18 @@ int IcpOptimizer::performIRICP()
       cout << "Unable to open source PointCloud granullball sphere radius file" << endl; // 文件无法打开，输出错误信息
   }
 
-  /*读取目标点云的粒球信息*/
-  vector<int> secondCloudGranullballPointNumber; // 存储目标点云的粒球内点的数量信息
-  vector<double> secondCloudGranullballRadius; // 存储目标点云的粒球半径信息
+ 
+  vector<int> secondCloudGranullballPointNumber;
+  vector<double> secondCloudGranullballRadius; 
 
-  ifstream input_secondCloud_GranullballPointNumber("./granuleball_info/ArmadilloStand_0_gb_info/ArmadilloStand_0_gb_info_0.78/ArmadilloStand_0_rotatey_180_gb_0.78_pointNum.txt"); // 打开目标点云粒球点数量文件
-  ifstream input_secondCloud_GranullballRadius("./granuleball_info/ArmadilloStand_0_gb_info/ArmadilloStand_0_gb_info_0.78/ArmadilloStand_0_rotatey_180_gb_0.78_radius.txt"); // 打开目标点云粒球点数量文件
-  //ifstream input_secondCloud_GranullballPointNumber("./granuleball_info/bunny_side2_gb_info/bunny_side2_gb_info_0.78/bunny_side2_rotatey_180_gb_0.78_pointNum.txt"); // 打开目标点云粒球点数量文件
-  //ifstream input_secondCloud_GranullballRadius("./granuleball_info/bunny_side2_gb_info/bunny_side2_gb_info_0.78/bunny_side2_rotatey_180_gb_0.78_radius.txt"); // 打开目标点云粒球点数量文件
-  //ifstream input_secondCloud_GranullballPointNumber("./granuleball_info/dragonStandRight_0_gb_info/dragonStandRight_0_gb_info_0.78/dragonStandRight_0_rotatey_180_overlap_gb_0.78_pointNum.txt"); // 打开目标点云粒球点数量文件
-  //ifstream input_secondCloud_GranullballRadius("./granuleball_info/dragonStandRight_0_gb_info/dragonStandRight_0_gb_info_0.78/dragonStandRight_0_rotatey_180_overlap_gb_0.78_radius.txt"); // 打开目标点云粒球点数量文件
+  ifstream input_secondCloud_GranullballPointNumber("./granuleball_info/ArmadilloStand_0_gb_info/ArmadilloStand_0_gb_info_0.78/ArmadilloStand_0_rotatey_180_gb_0.78_pointNum.txt"); 
+  ifstream input_secondCloud_GranullballRadius("./granuleball_info/ArmadilloStand_0_gb_info/ArmadilloStand_0_gb_info_0.78/ArmadilloStand_0_rotatey_180_gb_0.78_radius.txt"); 
+  //ifstream input_secondCloud_GranullballPointNumber("./granuleball_info/bunny_side2_gb_info/bunny_side2_gb_info_0.78/bunny_side2_rotatey_180_gb_0.78_pointNum.txt"); 
+  //ifstream input_secondCloud_GranullballRadius("./granuleball_info/bunny_side2_gb_info/bunny_side2_gb_info_0.78/bunny_side2_rotatey_180_gb_0.78_radius.txt"); 
+  //ifstream input_secondCloud_GranullballPointNumber("./granuleball_info/dragonStandRight_0_gb_info/dragonStandRight_0_gb_info_0.78/dragonStandRight_0_rotatey_180_overlap_gb_0.78_pointNum.txt"); 
+  //ifstream input_secondCloud_GranullballRadius("./granuleball_info/dragonStandRight_0_gb_info/dragonStandRight_0_gb_info_0.78/dragonStandRight_0_rotatey_180_overlap_gb_0.78_radius.txt"); 
 
-  /*目标点云粒球的点数量*/
+ 
   if (input_secondCloud_GranullballPointNumber.is_open()) { // 如果文件成功打开
       int num;
       while (input_secondCloud_GranullballPointNumber >> num) { // 逐行读取数据
@@ -203,7 +203,7 @@ int IcpOptimizer::performIRICP()
           double densitydiff= abs(sourcedensity-targetdensity)/min(sourcedensity,targetdensity);
           double pointnumdiff = (double)(sourceGranullballnum - targetGranullballnum) / min(sourceGranullballnum, targetGranullballnum);
           double pointradiusdiff = (sourceGranullballRadius - targetGranullballRadius) / min(sourceGranullballRadius, targetGranullballRadius);
-          //如果对应粒球的差异小于%，则认为是正确的匹配对
+         
           if (densitydiff<0.2)
           {
             PointPairWise.push_back(PointPair);
@@ -264,7 +264,7 @@ int IcpOptimizer::performIRICP()
 
 
       //movingPC = movePointCloud(firstCloud, iterTransfo); 
-      movingPC = movePointCloud(movingPC, iterTransfo);  //在rigidtransfor中也要使用上一次的transformation而不是总共的transformation
+      movingPC = movePointCloud(movingPC, iterTransfo);  
       movingNormals = (iterTransfo.first * movingNormals.transpose()).transpose();
       computedTransfo = compose(iterTransfo, computedTransfo);
       lastItertransfo = iterTransfo;//将最新的刚性变换更新
