@@ -1,3 +1,0 @@
-E:\Cmake\bin\cmake.exe -E rm -f CMakeFiles\icpSparse.dir/objects.a
-E:\mingw64\bin\ar.exe qc CMakeFiles\icpSparse.dir/objects.a @CMakeFiles\icpSparse.dir\objects1.rsp
-E:\mingw64\bin\c++.exe  -std=c++11 -O2 -Wl,--whole-archive CMakeFiles\icpSparse.dir/objects.a -Wl,--no-whole-archive -o icpSparse.exe -Wl,--out-implib,libicpSparse.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\icpSparse.dir\linklibs.rsp

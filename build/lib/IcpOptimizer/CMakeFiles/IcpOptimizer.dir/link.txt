@@ -1,2 +1,0 @@
-E:\mingw64\bin\ar.exe qc libIcpOptimizer.a CMakeFiles/IcpOptimizer.dir/IcpOptimizer.cpp.obj
-E:\mingw64\bin\ranlib.exe libIcpOptimizer.a
