@@ -8,10 +8,10 @@
 using namespace std;
 using namespace Eigen;
 
-class IcpSparseDemo
+class IRICPDemo
 {
 public:
-  IcpSparseDemo()
+  IRICPDemo()
   {
     
   }
@@ -75,7 +75,7 @@ public:
     IcpOptimizer* myIcpOptimizer2 = new IcpOptimizer(pointCloudOne,pointCloudTwo,kNormals,nbIterations,nbIterationsIn,mu,nbIterShrink,p,method,verbose);
     
     //Perform ICP
-    myIcpOptimizer2->performSparceICP();
+    myIcpOptimizer2->performIRICP();
     resultingCloud = myIcpOptimizer2->getMovedPointCloud();
     myLoader.dumpToFile(resultingCloud,myIcpOptimizer2->getMovedNormals(),mediaDir+"bunny_noised_correntropy_based_ICP.ply");
     myIcpOptimizer2->saveIter(mediaDir+"bunny_noised_ICP.txt");
