@@ -1,4 +1,4 @@
-# Sparse Iterative Closest Point Algorithm #
+# Initialization Robust Iterative Closest Point Algorithm #
 
 This repository contains an implementation of the [IRICP]
 ## Dependencies ##
